@@ -1,0 +1,29 @@
+<h1> Welcome to Trippin Out!</h1>
+
+
+<table>
+<thead>
+  <tr>
+    <th> Name </th>
+    <th> Email </th>
+    <th> Phone </th>
+    <th> Balance Due </th>
+  </tr>
+  </thead>
+
+
+<tbody>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.phone %></td>
+    <td><%= user.profile_pic %></td>
+    <td><%= user.balance %></td>
+    </tr>
+    <% end %>
+    </tbody>
+    </table>
+
+
+</tbody>
