@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+# /before_action :authorize, except: [:index, :show] #restrics access to editing if youre not logged in
+# /before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -37,7 +38,14 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
-end
+  end
+
+  def destroy
+    @user = User.find(params[:id]).destroy
+    flash[:success] = "You have left the trip!"
+    redirect_to root_path
+  end
+
 
   private
     # Implement Strong Params
