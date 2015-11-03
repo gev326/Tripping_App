@@ -1,0 +1,37 @@
+<h1> Welcome to your Trip! </h1>
+
+
+
+<table>
+<thead>
+  <tr>
+
+    <th> Location </th>
+    <th> Date </th>
+    <th> Transportation Mode </th>
+    <th> Departure Location</th>
+    <th> Departure Time </th>
+    <th> Return Location</th>
+    <th> Return Time </th>
+  </tr>
+  </thead>
+
+
+<tbody>
+<%= image_tag "costarica.jpg" %>
+  <% @trips.each do |trip| %>
+  <tr>
+    <td><%= trip.location %></td>
+    <td><%= trip.date %></td>
+    <td><%= trip.mode %></td>
+    <td><%= trip.departure_location %></td>
+    <td><%= trip.departure_time %></td>
+    <td><%= trip.return_location %></td>
+    <td><%= trip.return_time %></td>
+    </tr>
+    <% end %>
+    </tbody>
+    </table>
+
+
+</tbody>

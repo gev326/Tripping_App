@@ -4,6 +4,7 @@
 <table>
 <thead>
   <tr>
+    <th> Guest </th>
     <th> Name </th>
     <th> Email </th>
     <th> Phone </th>
@@ -15,11 +16,12 @@
 <tbody>
   <% @users.each do |user| %>
   <tr>
+    <td><%= image_tag user.profile_pic%></td>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><%= user.phone %></td>
-    <td><%= user.profile_pic %></td>
-    <td><%= user.balance %></td>
+    <td>$   <%= user.balance %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %>
     </tr>
     <% end %>
     </tbody>
