@@ -1,6 +1,35 @@
-<h1> Make Changes to Your Trip! </h1>
 
-<%= render 'form' %>
+<h1> Update Your Trip! </h1>
 
-<%= link_to 'Show', @trip %> |
-<%= link_to 'Back', trips_path %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+
+      <%= f.label :location %>
+      <%= f.text_field :location, class: 'form-control' %>
+
+      <%= f.label :date %>
+      <%= f.text_field :date, class: 'form-control' %>
+
+      <%= f.label :transportation %>
+      <%= f.text_field :mode, class: 'form-control' %>
+
+       <%= f.label :departure_location %>
+      <%= f.text_field :departure_location, class: 'form-control' %>
+
+       <%= f.label :departure_time %>
+      <%= f.text_field :departure_time, class: 'form-control' %>
+
+       <%= f.label :return_location %>
+      <%= f.text_field :return_location, class: 'form-control' %>
+
+     <%= f.label :return_time %>
+      <%= f.text_field :return_time, class: 'form-control' %>
+
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+
+  </div>
+</div>
