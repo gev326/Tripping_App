@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'guests/new'
+
+  get 'guests/create'
+
    #root 'trip#index'
   root 'welcome#index'
   #root 'users#index'
@@ -9,5 +13,7 @@ Rails.application.routes.draw do
 
   resources :trips
   resources :activities
+
+  resources :guests, only: [:new, :create]
 
 end

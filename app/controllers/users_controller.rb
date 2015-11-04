@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :authorize, except: [:index, :show] #restrics access to editing if youre not logged in
+before_action :authorize, except: [:index, :show, :new, :create] #restrics access to editing if youre not logged in
 # /before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index

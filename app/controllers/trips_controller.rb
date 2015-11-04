@@ -3,7 +3,8 @@ before_action :authorize, except: [:index, :show] #restrics access to adding/edi
 # before_action :set_trip, only: [:show, :edit, :update, :destroy]
 
 def index
-  @trips = Trip.all
+  @trip = Trip.find_by(user_id: current_user.id)
+  @guests = Guest.where(trip_id: @trip.id)
 end
 
   def show
