@@ -11,7 +11,7 @@
   </tr>
   </thead>
 
-
+<%= link_to 'New Activity', new_activity_path %>
 <tbody>
   <% @activity.each do |activity| %>
   <tr>
@@ -20,8 +20,9 @@
     <td><%= activity.time %></td>
     <td><%= activity.location %></td>
     <td><%= activity.information %></td>
+
     <td><%= link_to 'Edit', edit_activity_path(activity) %>
-    <td><%= link_to 'Delete', activity, method: :delete, data: { confirm: 'Are you sure you want to cancel your trip?' } %> </td>
+    <td><%= link_to 'Delete', activity, method: :delete, data: { confirm: 'Are you sure you want to cancel this activity?' } %> </td>
 
     </tr>
     <% end %>

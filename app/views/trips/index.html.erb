@@ -20,7 +20,7 @@
 <tbody>
 <%= image_tag "costarica.jpg" %>
    <%= link_to 'New Trip', new_trip_path %>
-
+  <%= link_to 'New Activity', new_activity_path %>
   <% @trips.each do |trip| %>
   <tr>
     <td><%= trip.location %></td>
