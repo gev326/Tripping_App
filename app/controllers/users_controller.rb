@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "You have successfully signed up for Trippin Out! Organize Your Trip Now!"
-      redirect_to trip_index_path
+      redirect_to trips_path
     else
       render 'new'
     end

@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :users
  resources :sessions, only: [:index, :new, :create, :edit, :destroy]
   get '/login', to: 'sessions#new'
-get '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
 
-  resources :trip
+  resources :trips
+  resources :activities
 
 end
