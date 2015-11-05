@@ -1,15 +1,15 @@
 class TripsController < ApplicationController
-before_action :authorize, except: [:show, :new, :create] #restrics access to adding/editing trips if youre not logged in
+before_action :authorize, except: [:index, :show, :new, :create] #restrics access to adding/editing trips if youre not logged in
 #before_action :set_trip, only: [:show, :new, :edit, :update, :destroy]
 
 def index
-  @trip = Trip.find_by(trip_id: current_user.id)
+  @trip = Trip.find_each(trip_id: current_user.id)
   @activity = Activity.all
 
 end
 
   def show
-   @trip = Trip.all
+   @trip = Trip.find(params[:location])
 
   end
 
