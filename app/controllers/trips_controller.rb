@@ -3,13 +3,12 @@ before_action :authorize, except: [:index, :show, :new, :create] #restrics acces
 #before_action :set_trip, only: [:show, :new, :edit, :update, :destroy]
 
 def index
-  @trip = Trip.find_each(trip_id: current_user.id)
+  @trip = current_user.trip
   @activity = Activity.all
-
 end
 
   def show
-   @trip = Trip.find(params[:location])
+   @trip = current_user.trip
 
   end
 
