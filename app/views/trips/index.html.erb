@@ -18,9 +18,7 @@
 
 
 <tbody>
-<%= image_tag "costarica.jpg" %>
-   <%= link_to 'New Trip', new_trip_path %>
-  <%= link_to 'New Activity', new_activity_path %>
+<%= link_to 'new trip', new_trip_path %>
   <% if @trip %>
   <tr>
     <td><%= @trip.location %></td>
@@ -35,7 +33,7 @@
   </tr>
   <tr>
     <td colspan="4"><h3>Guest List</h3></td>
-    <td colspan="3"><a href="/guests/new">Get On The List!</a></td>
+    <td colspan="3"><%= link_to 'Get on Guest List', new_trip_guest_path(@trip.id) %></td>
   </tr>
   <tr>
     <td colspan="3">Name</td>
@@ -43,7 +41,7 @@
     <td>Phone</td>
     <td>Balance:</td>
   </tr>
-  <% @guests.each do |g| %>
+  <% @trip.guests.each do |g| %>
     <tr>
       <td colspan="3"><%= g.name %></td>
       <td colspan="2"><%= g.email %></td>
@@ -55,8 +53,10 @@
       <% else %>
     <p> You Have No Trip! </p>
   <% end %>
-    </tbody>
-    </table>
 
 
-</tbody>
+
+
+
+
+

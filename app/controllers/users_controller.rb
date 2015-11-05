@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 before_action :authorize, except: [:index, :show, :new, :create] #restrics access to editing if youre not logged in
-# /before_action :set_user, only: [:show, :edit, :update, :destroy]
+#before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -24,7 +24,7 @@ before_action :authorize, except: [:index, :show, :new, :create] #restrics acces
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "You have successfully signed up for Trippin Out! Organize Your Trip Now!"
-      redirect_to trips_path
+      redirect_to new_trip_path
     else
       render 'new'
     end
@@ -34,7 +34,7 @@ before_action :authorize, except: [:index, :show, :new, :create] #restrics acces
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Your Info Has Been Updated!"
-      redirect_to root_path
+      redirect_to trips_path
     else
       render 'edit'
     end
@@ -43,7 +43,7 @@ before_action :authorize, except: [:index, :show, :new, :create] #restrics acces
   def destroy
     @user = User.find(params[:id]).destroy
     flash[:success] = "You have left the trip!"
-    redirect_to root_path
+    redirect_to users_path
   end
 
 

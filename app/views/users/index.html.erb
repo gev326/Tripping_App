@@ -20,7 +20,7 @@
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><%= user.phone %></td>
-    <td>$   <%= user.balance %></td>
+    <td>$ <%= user.balance %></td>
     <td><%= link_to 'New Guest', new_user_path(user) %>
     <td><%= link_to 'Edit', edit_user_path(user) %>
       <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure you want to leave the trip?' } %> </td>

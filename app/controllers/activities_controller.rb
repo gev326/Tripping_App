@@ -24,7 +24,7 @@ end
     @activity = Activity.new(activities_params)
     if @activity.save
       flash[:notice] = "You have created your trip! Lets get Started!"
-      redirect_to activities_path
+      redirect_to trips_path
     else
       render 'new'
     end
