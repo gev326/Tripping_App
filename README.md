@@ -35,3 +35,6 @@ The main objective of this app to make the trip as organized as possible.
 3. [ ] User should be able to add, edit, and delete items on Activity
 
 4. [ ] User should be able to edit and delete guest list
+
+
+https://glacial-oasis-2426.herokuapp.com/
