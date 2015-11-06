@@ -7,21 +7,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-      <% if current_user %>
-        Hello, <%= current_user.name %>
-        <%= link_to 'Logout', session_path('test'), method: :delete %>
-      <% else %>
-
+  <% if current_user %>
+    Hello, <%= current_user.name %>
+    <%= link_to 'Logout', session_path('test'), method: :delete %>
+  <% else %>
   <% end %>
-
-
-
-  </ul>
-</nav>
-</div>
-
-
-
 
 <%= yield %>
 

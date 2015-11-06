@@ -1,37 +1,39 @@
 
 <h1>Lets Have Some Fun!</h1>
-<%= form_for @activity do |f| %>
-  <% if @activity.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @activity.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <%= form_for @activity do |f| %>
+    <% if @activity.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+            <ul>
+              <% for message in @activity.errors.full_messages %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+        </div>
   <% end %>
-  <div class="field">
-    <%= f.label :date%>
-    <%= f.text_field :date %>
-  </div>
-  <div class="field">
-    <%= f.label :event %>
-    <%= f.text_field :event %>
-  </div>
-  <div class="field">
-    <%= f.label :time %>
-    <%= f.text_field :time %>
-  </div>
 
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location%>
-  </div>
+    <div class="field">
+      <%= f.label :date%>
+      <%= f.text_field :date %>
+    </div>
+    <div class="field">
+      <%= f.label :event %>
+      <%= f.text_field :event %>
+    </div>
+    <div class="field">
+      <%= f.label :time %>
+      <%= f.text_field :time %>
+    </div>
 
-  <div class="field">
-    <%= f.label :information %>
-    <%= f.text_field :information%>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>
+    <div class="field">
+      <%= f.label :location %>
+      <%= f.text_field :location%>
+    </div>
+
+    <div class="field">
+      <%= f.label :information %>
+      <%= f.text_field :information%>
+    </div>
+    <div class="actions"><%= f.submit %></div>
+
+  <% end %>
