@@ -12,9 +12,6 @@ itinerary, activities, and other guests.
 
 The main objective of this app to make the trip as organized as possible.
 
-### User Stories
-
-The game seems basic and straight forward but on a user's perspective there is some things to consider.
 
 ### User Stories
 
