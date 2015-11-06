@@ -20,9 +20,43 @@
 
 body {
   background-color: #58FAAC;
+  color: #003399;
   }
 
-html, body, .container-fluid, .row, .col-md-12 {
-  height: 100%;
+.container {
+  margin: 0 auto;
 }
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.head {
+  padding-right: 20px;
+
+}
+
+.data {
+
+  text-align: center;
+  padding-right: 10px;
+
+}
+
+.header {
+  text-align: justify;
+}
+
+.field {
+  padding-right: 10px;
+}
+
+.field1 {
+  margin: 0 auto;
+  padding-right: 20px;
+}
+// html, body, .container-fluid, .row, .col-md-12 {
+//   height: 100%;
+// }
 

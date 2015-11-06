@@ -1,0 +1,25 @@
+
+<h1> Update Your Guests! </h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for ([@trip, @guest]) do |t| %>
+
+      <%= t.label :name %>
+      <%= t.text_field :name, class: 'form-control' %>
+
+      <%= t.label :phone %>
+      <%= t.text_field :phone, class: 'form-control' %>
+
+      <%= t.label :email %>
+      <%= t.text_field :email, class: 'form-control' %>
+
+      <%= t.label :balance %>
+      <%= t.text_field :balance, class: 'form-control' %>
+
+      <%= t.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+
+  </div>
+</div>

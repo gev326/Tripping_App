@@ -1,62 +1,63 @@
-<h1> Welcome to your Trip! </h1>
+<div class="container">
+<h1 class = "header"> Welcome To Your Trip! </h1>&nbsp;
 
-
+<h3><%= link_to 'New Trip', new_trip_path %></h3>
+<%= image_tag "costarica.jpg" %>
 
 <table>
-<thead>
-  <tr>
-
-    <th> Location </th>
-    <th> Date </th>
-    <th> Transportation Mode </th>
-    <th> Departure Location</th>
-    <th> Departure Time </th>
-    <th> Return Location</th>
-    <th> Return Time </th>
-  </tr>
+  <thead>
+    <tr>
+      <th class ='head'> Location </th>
+      <th class ='head'> Date </th>
+      <th class ='head'> Transportation Mode </th>
+      <th class ='head'> Departure Location</th>
+      <th class ='head'> Departure Time </th>
+      <th class ='head'> Return Location</th>
+      <th class ='head'> Return Time </th>
+    </tr>
   </thead>
 
-
-<tbody>
-<%= link_to 'new trip', new_trip_path %>
-  <% if @trip %>
-  <tr>
-    <td><%= @trip.location %></td>
-    <td><%= @trip.date %></td>
-    <td><%= @trip.mode %></td>
-    <td><%= @trip.departure_location %></td>
-    <td><%= @trip.departure_time %></td>
-    <td><%= @trip.return_location %></td>
-    <td><%= @trip.return_time %></td>
-    <td><%= link_to 'Edit', edit_trip_path(@trip) %>
-    <td><%= link_to 'Delete', @trip, method: :delete, data: { confirm: 'Are you sure you want to cancel your trip?' } %> </td>
-  </tr>
-  <tr>
-    <td colspan="4"><h3>Guest List</h3></td>
-    <td colspan="3"><%= link_to 'Get on Guest List', new_trip_guest_path(@trip.id) %></td>
-  </tr>
-  <tr>
-    <td colspan="3">Name</td>
-    <td colspan="2">Email</td>
-    <td>Phone</td>
-    <td>Balance:</td>
-  </tr>
-  <% @trip.guests.each do |g| %>
-    <tr>
-      <td colspan="3"><%= g.name %></td>
-      <td colspan="2"><%= g.email %></td>
-      <td><%= g.phone %></td>
-      <td><%= g.balance %></td>
-    </tr>
-  <% end %>
-
-      <% else %>
-    <p> You Have No Trip! </p>
-  <% end %>
+  <tbody>
 
 
+    <% if @trip %>
+      <tr>
+        <td class = "data"><%= @trip.location %></td>
+        <td class = "data"><%= @trip.date %></td>
+        <td class = "data"><%= @trip.mode %></td>
+        <td class = "data"><%= @trip.departure_location %></td>
+        <td class = "data"><%= @trip.departure_time %></td>
+        <td class = "data"><%= @trip.return_location %></td>
+        <td class = "data"><%= @trip.return_time %></td>
+        <td class = "data"><%= link_to 'Edit', edit_trip_path(@trip) %>
+        <td class = "data"><%= link_to 'Delete', @trip, method: :delete, data: { confirm: 'Are you sure you want to cancel your trip?' } %> </td>
+      </tr>
 
 
+      <tr>
+        <td colspan="4"><h3>Guest List</h3></td>
+        <td colspan="2"><%= link_to 'Get On The List!', new_trip_guest_path([@trip]) %></td>
+      </tr>
+      <tr>
+        <th colspan="3">Name</th>
+        <th colspan="2">Email</th>
+        <th>Phone</th>
+        <th>Balance:</th>
+      </tr>
+      <% @trip.guests.each do |g| %>
+        <tr>
+          <td colspan="3"><%= g.name %></td>
+          <td colspan="2"><%= g.email %></td>
+          <td><%= g.phone %></td>
+          <td>$<%= g.balance %></td>
+          <td><%= link_to 'Edit', edit_guest_path(@trip.id) %>
+          <td><%= link_to 'Delete', @guest, method: :delete, data: { confirm: 'Are you sure you want to cancel your trip?' } %> </td>
 
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
 
-
+</tbody>
+</div>

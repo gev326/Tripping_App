@@ -34,7 +34,7 @@ before_action :authorize, except: [:index, :show, :new, :create] #restrics acces
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Your Info Has Been Updated!"
-      redirect_to trips_path
+      redirect_to user_path
     else
       render 'edit'
     end

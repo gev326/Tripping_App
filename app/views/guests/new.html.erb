@@ -1,5 +1,7 @@
 <h1>Get On The List!</h1>
-<%= form_for @guest do |f| %>
+
+<%# binding.pry %>
+<%= form_for [@trip, @guest] do |f| %>
  <div class="field">
     <%= f.label :name %><br>
    <%= f.text_field :name %>
@@ -19,7 +21,6 @@
      <%= f.number_field :balance %>
    </div>
 
-  <%= f.hidden_field, :trip_id, value: @trip.id %>
 
  <div class="actions"><%= f.submit %></div>
 

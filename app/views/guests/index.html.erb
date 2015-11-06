@@ -5,7 +5,7 @@
     <td><%= guest.email %></td>
     <td><%= guest.phone %></td>
     <td>$   <%= guest.balance %></td>
-    <td><%= link_to 'New Guest', new_user_path(guest) %>
+    <td><%= link_to 'New Guest', new_user_path(guest) %> &nbsp;&nbsp;|&nbsp;&nbsp;
     <td><%= link_to 'Edit', edit_guest_path(guest) %>
       <td><%= link_to 'Delete', guest, method: :delete, data: { confirm: 'Are you sure you want to leave the trip?' } %> </td>
     </tr>

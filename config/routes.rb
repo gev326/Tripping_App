@@ -6,24 +6,20 @@ Rails.application.routes.draw do
    #root 'trip#index'
   root 'welcome#index'
   #root 'users#index'
-resources :users
- resources :sessions, only: [:index, :new, :create, :edit, :destroy]
+  resources :users
+  resources :sessions, only: [:index, :new, :create, :edit, :destroy]
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
 
-  resources :trips
+  # resources :trips
   resources :activities
 
+  #resources :guests
+
   #resources :guests, only: [:new, :create]
-
-  resources :guests, only: [:index, :new, :create, :show, :destroy]
   resources :trips, shallow: true do
-    resources :guests
-
-
-    end
-
-
+      resources :guests, only: [:index, :new, :create, :edit, :destroy]
+  end
 end
 
 
