@@ -1,5 +1,9 @@
 #TrippinOut
 
+![HomePage](https://i.imgur.com/jEeTUN3.png)
+![Trips Page](https://i.imgur.com/Ob4tT6f.png)
+https://glacial-oasis-2426.herokuapp.com/
+
 A trip planning app to make your trips more organized for you and your friends!
 
 This app is made for a trip organizer to create the location and information for the trip
@@ -14,21 +18,23 @@ The game seems basic and straight forward but on a user's perspective there is s
 
 ### User Stories
 
-1. [ ] User should be able to sign up for a new account
+1. [x] User should be able to sign up for a new account and create a trip
   
-2. [ ] User should be able to log in and see the home page
+2. [x] User should be able to log in and see their trips page
 
-3. [ ] User should be able to add an event/trip and see the information
+3. [x] User should be able to add,edit,update,delet a trip and see the information
 
-4. [ ] user should be able to post in itinerary
+4. [x] Users should be able to see other guests information such as name, email, phone, and balance
 
-5. [ ] User should have default balance of zero
+5. [x] User should be able to add guests to their trip
 
-6. [ ] User should be able to add, edit, and delete items on Activity
-
-7. [ ] Users should be able to see other users information such as name, email, phone, and balance
-
-8. [ ] users should be able to post, delete, update, read information on discussion
 
 
 ### ICEBOX
+1. [ ] users should be able to post, delete, update, read information on discussion
+
+2. [ ] user should be able to post in itinerary
+
+3. [ ] User should be able to add, edit, and delete items on Activity
+
+4. [ ] User should be able to edit and delete guest list
