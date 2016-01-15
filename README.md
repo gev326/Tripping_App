@@ -2,13 +2,15 @@
 
 ## Layouts and Pages
 ![HomePage](https://i.imgur.com/jEeTUN3.png)
-![Trips Page](https://i.imgur.com/Ob4tT6f.png)
+
 
 ## Heroku Site
 https://glacial-oasis-2426.herokuapp.com/
 
 ##Trello 
 https://trello.com/b/sQA2wtk2/wdi-project-2
+
+## Objective of the App
 
 A trip planning app to make your trips more organized for you and your friends!
 
