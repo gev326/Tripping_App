@@ -34,6 +34,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap_form'
 
+gem 'simple_form'
+
 gem 'puma'
 
 gem 'rails_12factor', group: :production

@@ -15,14 +15,21 @@
  *= require_self
  */
 
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 body {
-  background-color: white;
   color: #003399;
+  background-image: url(asset-path('trav.jpeg'));
+  background-size: 100%;
+  font-family: 'Dancing Script', cursive;
   }
 
+h1 {
+  font-size: 50px;
+}
   .login-form {
   margin-top: 60px;
 }
@@ -71,6 +78,11 @@ body {
 
 .header {
   text-align: justify;
+}
+
+.field {
+  padding-top: 5px;
+  padding-right: 10px;
 }
 
 

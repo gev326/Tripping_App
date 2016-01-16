@@ -2,12 +2,13 @@
 
 
 <div class="container col-md-12 center">
+<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 <h1> WELCOME TO TRIPPIN OUT! </h1>
 <div class="row">
   <div class="col-md-12">
   <section class="login-form">
-  <button type="button" class="btn btn-default"><%= link_to 'Sign Up', new_user_path %></button>
-  <button type="button" class="btn btn-default"><%= link_to 'Login', login_path %></button>
+  <%= link_to 'SIGN UP', new_user_path, :class => "btn btn-primary btn-md"%>
+  <%= link_to 'LOGIN', login_path, :class => "btn btn-primary btn-md" %>
 </div>
 </section>
 </div>
