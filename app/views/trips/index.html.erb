@@ -50,6 +50,7 @@
           <td><%= g.phone %></td>
           <td>$<%= g.balance %></td>
           <td><%= link_to 'Edit', edit_guest_path(@trip.id) %>
+          <!-- edit_guest_path(g.id) -->
           <td><%= link_to 'Delete', @guest, method: :delete, data: { confirm: 'Are you sure you want to cancel your trip?' } %> </td>
 
         </tr>

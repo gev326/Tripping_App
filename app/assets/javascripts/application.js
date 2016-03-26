@@ -16,3 +16,7 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+$('input.datepicker').datepicker();
+});
